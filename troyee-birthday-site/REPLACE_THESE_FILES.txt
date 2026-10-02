@@ -1,0 +1,21 @@
+V3 update files
+
+Copy these three files into your existing birthday website folder and choose Replace/Overwrite:
+- index.html
+- styles.css
+- script.js
+
+Do NOT delete your assets folder. Your photos, video and music stay exactly where they are.
+
+Main V3 changes:
+- Restored/upgraded 5 October circular birthday seal on the opening page.
+- Game shortened and rebalanced for phone play.
+- 4 lives; when lives run out they refresh instead of wiping collected hearts.
+- 3 checkpoints / safe places.
+- 6 heart shards instead of 8.
+- Wider platforms and smaller hazard hitboxes.
+- Jump buffering + coyote time for more forgiving mobile controls.
+- Larger thumb controls.
+- Character label: TROYEE.
+- End character label: RAFI.
+- Proper animated heart bridge at DISTANCE gate.

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#09070d" />
+  <title>Happy Birthday, Jaan ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="particles" aria-hidden="true"></div>
+  <div id="cinematicTransition" aria-hidden="true"></div>
+
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle music">♫</button>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/audio/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <main id="app">
+
+    <!-- CHAPTER 1 -->
+    <section class="chapter chapter--active hero" id="chapter-1" data-chapter="1">
+      <div class="chapter-inner centered">
+        <p class="eyebrow reveal">5 OCTOBER</p>
+        <h1 class="hero-title reveal delay-1">Some dates are just dates.</h1>
+        <p class="hero-copy reveal delay-2">
+          But one date gave the world someone irreplaceable.
+        </p>
+        <div class="birthday-seal reveal delay-3" aria-label="5 October birthday seal">
+          <span class="seal-spark seal-spark-a">✦</span>
+          <span class="seal-spark seal-spark-b">✦</span>
+          <span class="seal-ring seal-ring-one"></span>
+          <span class="seal-ring seal-ring-two"></span>
+          <div class="date-orb">
+            <span>05</span>
+            <small>OCTOBER</small>
+          </div>
+          <span class="seal-caption">THE DAY YOU ARRIVED</span>
+        </div>
+        <p class="hero-copy reveal delay-4">The day my favourite person was born.</p>
+        <h2 class="love-line reveal delay-5">Happy Birthday, my Jaan. ❤️</h2>
+        <button class="primary-btn reveal delay-6 next-btn" data-next="2">
+          Enter your birthday world
+        </button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2 -->
+    <section class="chapter" id="chapter-2" data-chapter="2">
+      <div class="chapter-inner">
+        <p class="eyebrow">CHAPTER TWO</p>
+        <h2>Let me tell you about the girl I love…</h2>
+        <p class="section-intro">Tap every little piece of her.</p>
+
+        <div class="trait-grid">
+          <button class="trait-card" data-title="Her smile" data-text="Your smile has this dangerous little power… it can fix my mood faster than anything else in this world.">Her smile</button>
+          <button class="trait-card" data-title="Her eyes" data-text="There is something about your eyes that always makes me pause. I don’t know how to explain it properly — they just feel like home to me.">Her eyes</button>
+          <button class="trait-card" data-title="Her heart" data-text="You have one of the softest, most beautiful hearts I have ever known. You care deeply, love deeply, and that is one of the reasons I fell for you so hard.">Her heart</button>
+          <button class="trait-card" data-title="Her attitude" data-text="Yes, your attitude scares me sometimes. But somehow even that became something I adore about you. 😭❤️">Her attitude</button>
+          <button class="trait-card" data-title="Her voice" data-text="Your voice can calm me down, comfort me, and make me miss you all at the same time.">Her voice</button>
+          <button class="trait-card" data-title="Her kindness" data-text="You may not even realise how kind you are in the little things you do, but I notice them. I always notice them.">Her kindness</button>
+          <button class="trait-card" data-title="Her chaos" data-text="You have this cute little chaos in you — and honestly, I would choose your chaos over anyone else’s peace.">Her chaos</button>
+          <button class="trait-card" data-title="Her presence" data-text="Even from far away, your presence changes my day. Imagine how much stronger that would be if I had you beside me.">Her presence</button>
+          <button class="trait-card" data-title="Her strength" data-text="You are stronger than you think, even on the days you feel weak. I hope one day you fully see yourself the way I see you.">Her strength</button>
+          <button class="trait-card" data-title="Just her" data-text="More than anything, I love you for being you. Not perfect. Not polished. Just genuinely, beautifully you.">Just her</button>
+        </div>
+
+        <div class="chapter-actions">
+          <button class="primary-btn next-btn" data-next="3">There’s more…</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trait modal -->
+    <div class="modal" id="traitModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" id="traitClose" aria-label="Close">×</button>
+        <p class="eyebrow">A LITTLE THING I LOVE</p>
+        <h3 id="traitTitle"></h3>
+        <p id="traitText"></p>
+      </div>
+    </div>
+
+    <!-- CHAPTER 3 -->
+    <section class="chapter" id="chapter-3" data-chapter="3">
+      <div class="chapter-inner">
+        <p class="eyebrow">CHAPTER THREE</p>
+        <h2>A few of the million things I love about you</h2>
+        <p class="section-intro">Tap the hearts. I promise I could keep going forever.</p>
+
+        <div class="love-grid" id="loveGrid"></div>
+        <div id="loveMessage" class="love-message glass-card">
+          <span>Tap a heart ❤️</span>
+        </div>
+
+        <div class="chapter-actions">
+          <button class="primary-btn next-btn" data-next="4">Can I tell you something else?</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4 -->
+    <section class="chapter" id="chapter-4" data-chapter="4">
+      <div class="chapter-inner">
+        <p class="eyebrow">CHAPTER FOUR</p>
+        <h2>If I Were There Today…</h2>
+        <p class="section-intro">This is exactly how I would spend your birthday with you.</p>
+
+        <div class="day-story">
+          <article class="story-scene glass-card">
+            <span class="scene-time">Morning</span>
+            <h3>Breakfast in bed</h3>
+            <p>Before you even woke up, I’d quietly get out of bed and make breakfast for you. I’d bring it to you with a small bouquet, wake you gently, kiss your forehead and whisper, <strong>“Happy birthday, Jaan.”</strong></p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Later that morning</span>
+            <h3>Your day, your choice</h3>
+            <p>I’d let you take your time, shower, freshen up and get ready. Then we’d go somewhere you love, where you could look around, choose whatever you wanted, and enjoy the morning without thinking about anything else.</p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Back home</span>
+            <h3>Slow down</h3>
+            <p>You’d lie down and I’d give you a long head massage. No phone. No rush. Just my hands in your hair while you finally let yourself completely relax.</p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Lunch</span>
+            <h3>Made by me, for you</h3>
+            <p>I’d make lunch for you myself. Even if it wasn’t restaurant-perfect, I’d still stand there proudly like I had just cooked the greatest meal ever made. 😭❤️</p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Afternoon</span>
+            <h3>Arcade time</h3>
+            <p>We’d go out again, play arcade games, compete over stupid things, laugh too loudly, accuse each other of cheating, and turn tiny moments into memories we’d remember forever.</p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Evening</span>
+            <h3>I’d help you get ready</h3>
+            <p>I’d choose your clothes, help with your jewellery, sit beside you while you did your makeup, help with your hair, fix the little things, and step back every few minutes just to look at you and think, <strong>“How is this girl actually mine?”</strong></p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Night</span>
+            <h3>A long drive</h3>
+            <p>We’d go for a long drive with music playing and your hand in mine whenever I could hold it. No rush. No destination pressure. Just us moving through the night.</p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Dinner</span>
+            <h3>Candlelight & flowers</h3>
+            <p>I’d take you somewhere beautiful and quiet for a candlelight dinner. Before we sat down, I’d give you the biggest bouquet of the day, kiss your forehead, and tell you how precious you are to me.</p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Still dinner</span>
+            <h3>The quiet touches</h3>
+            <p>I’d hold your hands across the table, play with your hair, keep touching your hand and shoulder, and steal more kisses than I probably should — because every little touch would be another way of saying, <strong>“I missed you.”</strong></p>
+          </article>
+
+          <article class="story-scene glass-card">
+            <span class="scene-time">Home again</span>
+            <h3>The softest ending</h3>
+            <p>I’d give you another head massage, help all the tiredness disappear, cuddle you close, kiss you, and let you fall asleep on my chest with my arms around you and my hand in your hair.</p>
+          </article>
+
+          <article class="story-scene glass-card final-scene">
+            <span class="scene-time">Before sleep</span>
+            <h3>One last whisper</h3>
+            <p>And before I fell asleep too, I’d kiss your forehead one last time and whisper, <strong>“Happy birthday, my Jaan. I hope I get to give you this day for real someday.”</strong></p>
+          </article>
+        </div>
+
+        <div class="chapter-actions">
+          <button class="primary-btn next-btn" data-next="5">Show me more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5 -->
+    <section class="chapter" id="chapter-5" data-chapter="5">
+      <div class="chapter-inner">
+        <p class="eyebrow">CHAPTER FIVE</p>
+        <h2>Her, Through My Eyes</h2>
+        <p class="section-intro">Eight little frames. Eight little ways I see you.</p>
+
+        <div class="photo-stack">
+          <article class="photo-card">
+            <img src="assets/images/photo-1.jpg" alt="Her photo 1">
+            <p>There are so many flowers in this picture, and somehow my eyes still go straight to you. I think that says everything. ❤️</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-2.jpg" alt="Her photo 2">
+            <p>This one has such a quiet kind of beauty. The look, the colours, the way you’re sitting there… you look like someone I could stare at for way too long and still not get enough.</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-3.jpg" alt="Her photo 3">
+            <p>You look so effortlessly elegant here that it almost annoys me. Like… how do you just sit there and casually look this beautiful? 😭❤️</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-4.jpg" alt="Her photo 4">
+            <p> This picture is just pure you — cute, playful, a little silly, and ridiculously adorable. The kind of photo that instantly makes me smile.</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-5.jpg" alt="Her photo 5">
+            <p>Something about you in soft colours like this always gets me. You look so calm, graceful and beautiful here that the whole picture feels warm.</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-6.jpg" alt="Her photo 6">
+            <p>This is one of those pictures where your cute side completely takes over. The thumbs up, that little expression… yeah, I’d probably tease you about this photo forever. 😭</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-7.jpg" alt="Her photo 7">
+            <p>This look is dangerous for me. The outfit, the hijab, the way you’re standing… every time you dress this elegantly, my heart genuinely forgets how to behave for a second.</p>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/photo-8.jpg" alt="Her photo 8">
+            <p> You’re sitting there holding roses like they’re supposed to be the pretty part of the picture. Unfortunately for them, they never stood a chance next to you. 🌹❤️</p>
+          </article>
+        </div>
+
+        <div class="chapter-actions">
+          <button class="primary-btn next-btn" data-next="6">Okay… I think that’s everything.</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6 -->
+    <section class="chapter" id="chapter-6" data-chapter="6">
+      <div class="chapter-inner centered fake-ending">
+        <p class="eyebrow">THE END?</p>
+        <h2>That was my little birthday world for you.</h2>
+        <p class="section-intro">I hope you felt every little piece of it.</p>
+        <button class="primary-btn" id="fakeFinish">Finish ❤️</button>
+
+        <div class="surprise-lock hidden" id="surpriseLock">
+          <p class="wait-line">Wait…</p>
+          <h3>Did you really think I would let you leave this easily?</h3>
+          <div class="lock-icon">🔒</div>
+          <p>There’s still one last birthday gift.</p>
+          <p class="small-note">To unlock it, you have to win a little game.</p>
+          <button class="primary-btn next-btn" data-next="7">Challenge accepted</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 7 GAME -->
+    <section class="chapter" id="chapter-7" data-chapter="7">
+      <div class="chapter-inner game-section">
+        <p class="eyebrow">CHAPTER SEVEN</p>
+        <h2>Find Your Way To Me ❤️</h2>
+        <p class="section-intro">
+          Every love story has obstacles. Ours did too. Get to the other side and unlock your final surprise.
+        </p>
+
+        <div class="game-shell">
+          <canvas id="gameCanvas" width="360" height="560"></canvas>
+
+          <div class="game-hud">
+            <span id="heartCount">💗 0/8 &nbsp; • &nbsp; ✦ 3 lives</span>
+            <span id="gameStatus">Reach me</span>
+          </div>
+
+          <div class="touch-controls">
+            <button class="control-btn" id="moveLeft" aria-label="Move left">◀</button>
+            <button class="control-btn jump-btn" id="jumpBtn" aria-label="Jump">▲</button>
+            <button class="control-btn" id="moveRight" aria-label="Move right">▶</button>
+          </div>
+
+          <button class="secondary-btn" id="restartGame">Restart game</button>
+        </div>
+
+        <div id="gameWin" class="game-win hidden">
+          <div class="glass-card centered">
+            <div class="big-heart">❤️</div>
+            <h3>Level Complete</h3>
+            <p>You found your way to me.</p>
+            <p class="small-note">Your final gift is unlocked.</p>
+            <button class="primary-btn next-btn" data-next="8">Open it</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 8 -->
+    <section class="chapter" id="chapter-8" data-chapter="8">
+      <div class="chapter-inner centered">
+        <p class="eyebrow">CHAPTER EIGHT</p>
+        <h2>No more games now.</h2>
+        <p class="video-intro">No more surprises.</p>
+        <p class="video-intro">Just me.</p>
+        <p class="video-intro emphasis">I couldn’t be there in person… so I left a piece of my heart here for you.</p>
+
+        <div class="video-frame">
+          <video id="birthdayVideo" controls playsinline preload="metadata">
+            <source src="assets/video/birthday-message.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+
+
+        <div class="chapter-actions">
+          <button class="primary-btn next-btn" data-next="9">One last thing…</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 9 -->
+    <section class="chapter" id="chapter-9" data-chapter="9">
+      <div class="chapter-inner centered finale">
+        <p class="eyebrow">THE LAST CHAPTER</p>
+        <h2>One last thing, birthday girl…</h2>
+        <p>Close your eyes.</p>
+        <p>Make a wish.</p>
+
+        <div class="cake-wrap" id="cakeWrap">
+          <div class="candles">
+            <button class="candle" aria-label="Blow candle"><span class="flame"></span></button>
+            <button class="candle" aria-label="Blow candle"><span class="flame"></span></button>
+            <button class="candle" aria-label="Blow candle"><span class="flame"></span></button>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-body"><span>♥</span></div>
+        </div>
+
+        <p class="small-note">Tap the candles when you’re ready.</p>
+
+        <div id="finalMessage" class="final-message hidden">
+          <p>Whatever you wished for…</p>
+          <p>I hope life gives you that…</p>
+          <p>and a thousand beautiful things you forgot to ask for.</p>
+          <h2>Happy Birthday, Jaan. ❤️</h2>
+          <p class="final-line">Thank you for being born.</p>
+          <p class="signature">— Yours, always.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
